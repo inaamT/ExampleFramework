@@ -1,4 +1,4 @@
-@BA-194 @wip
+@BA-194 @BA-193
 Feature: Login Functionality
 Background: Given user on "Trycloud QA" page
 
