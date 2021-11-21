@@ -24,8 +24,8 @@ public class FilesModulesStepDefinition extends BasePage {
         fileModuleClick.click();
     }
 
-    @And("Title should be Files's module Title")
-    public void title_should_be_files_s_module_title() {
+    @And("Title is Files's module Title")
+    public void title_is_files_s_module_title() {
         Assert.assertEquals(Driver.get().getTitle(), "Files - Trycloud QA");
     }
 
