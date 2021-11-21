@@ -35,8 +35,8 @@ public class FilesModulesStepDefinition extends BasePage {
         selectAllFiles.click();
     }
 
-    @Then("all files are slected")
-    public void all_files_are_slected() {
+    @Then("all files are selected")
+    public void all_files_are_selected() {
     List<WebElement> listOfFiles = Driver.get().findElements(By.name("selectCheckBox checkbox"));
         for (WebElement file : listOfFiles) {
             Assert.assertTrue(file.isSelected());
