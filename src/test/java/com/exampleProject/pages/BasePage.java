@@ -24,7 +24,8 @@ public class BasePage {
     public WebElement innertext;
 @FindBy(xpath = "(//a[@href='/index.php/apps/files/'])[1]")
     public WebElement fileModuleClick;
-@FindBy(xpath = "(//span[@class='hidden-visually'][.='Select all'])[1]")
+@FindBy(xpath = "//span[.='Select all'][1]/..")
     public WebElement selectAllFiles;
+
 
 }
