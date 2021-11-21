@@ -1,6 +1,5 @@
 package com.exampleProject.utilities;
 
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
@@ -18,21 +17,12 @@ public class Driver {
 
     }
 
-    // InheritableThreadLocal  --> this is like a container, bag, pool.
-    // in this pool we can have separate objects for each thread
-    // for each thread, in InheritableThreadLocal we can have separate object for that thread
-
-    // driver class will provide separate webdriver object per thread
     private static InheritableThreadLocal<WebDriver> driverPool = new InheritableThreadLocal<>();
 
     public static WebDriver get() {
-        //if this thread doesn't have driver - create it and add to pool
         if (driverPool.get() == null) {
 
-//            if we pass the driver from terminal then use that one
-//           if we do not pass the driver from terminal then use the one properties file
-            String browser = System.getProperty("browser") != null ? System.getProperty("browser") : ConfigurationReader.get("browser");
-
+            String browser = System.getProperty("browser") != null ? browser = System.getProperty("browser") : ConfigurationReader.get("browser");
             switch (browser) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
