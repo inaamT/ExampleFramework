@@ -1,7 +1,6 @@
 package com.exampleProject.step_definitions;
 
 import com.exampleProject.pages.BasePage;
-import com.exampleProject.pages.FilesModulePage;
 import com.exampleProject.utilities.*;
 import com.exampleProject.utilities.Driver;
 import io.cucumber.java.en.And;
@@ -49,7 +48,7 @@ public class FilesModulesStepDefinition extends BasePage {
 
     @Then("all files are selected")
     public void all_files_are_selected() {
-    List<WebElement> listOfFiles = new FilesModulePage().allSelectedCheckbox;
+    List<WebElement> listOfFiles = allSelectedCheckbox;
         for (WebElement file : listOfFiles) {
             Assert.assertTrue(file.isSelected());
             System.out.println(file.isSelected());
