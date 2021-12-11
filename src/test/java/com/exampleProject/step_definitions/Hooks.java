@@ -26,7 +26,6 @@ public class Hooks {
         Driver.closeDriver();
     }
 
-
     @Before("@db")
     public void setUpDB(){
         System.out.println("Connecting to database...");
