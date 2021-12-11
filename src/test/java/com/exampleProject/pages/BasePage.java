@@ -5,30 +5,36 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.io.File;
 import java.util.List;
 
 
 public class BasePage {
 
-    public BasePage(){
+    public BasePage() {
         PageFactory.initElements(Driver.get(), this);
     }
 
-@FindBy(name = "user")
+    @FindBy(name = "user")
     public WebElement usernameBox;
-@FindBy(xpath = "//input[@id='password']")
+    @FindBy(xpath = "//input[@id='password']")
     public WebElement passwordBox;
-@FindBy(id = "submit-form")
+    @FindBy(id = "submit-form")
     public WebElement signInButton;
-@FindBy(xpath = "//p[@class='warning wrongPasswordMsg']")
+    @FindBy(xpath = "//p[@class='warning wrongPasswordMsg']")
     public WebElement warningWrongCredentials;
-@FindBy(xpath = "//fieldset")
+    @FindBy(xpath = "//fieldset")
     public WebElement innertext;
-@FindBy(xpath = "(//a[@href='/index.php/apps/files/'])[1]")
+    @FindBy(xpath = "(//a[@href='/index.php/apps/files/'])[1]")
     public WebElement fileModuleClick;
-@FindBy(xpath = "//span[.='Select all'][1]/..")
+    @FindBy(xpath = "//span[.='Select all'][1]/..")
     public WebElement selectAllFiles;
-@FindBy(xpath = "//tbody[@id='fileList']//td[@class='selection']")
+    @FindBy(xpath = "//tbody[@id='fileList']//td[@class='selection']")
     public List<WebElement> allSelectedCheckbox;
 
+
+    public static void main(String[] args) {
+    File file = new File("");
+        System.out.println(file.getAbsolutePath());
+    }
 }

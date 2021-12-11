@@ -15,7 +15,6 @@ public class Hooks {
         Driver.get().manage().window().maximize();
         Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Driver.get().get(ConfigurationReader.get("env"));
-//        System.out.println("hello" + new BasePage().innertext.getAttribute("Value"));
     }
 
     @After
@@ -25,5 +24,18 @@ public class Hooks {
             scenario.attach(screenshot, "image/png", scenario.getName());
         }
         Driver.closeDriver();
+    }
+
+
+    @Before("@db")
+    public void setUpDB(){
+        System.out.println("Connecting to database...");
+        DBUtils.createConnection();
+    }
+
+    @After("@db")
+    public void tearDownDB(){
+        System.out.println("close database connection...");
+        DBUtils.destroy();
     }
 }

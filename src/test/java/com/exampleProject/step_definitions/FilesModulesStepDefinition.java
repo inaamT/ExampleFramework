@@ -12,13 +12,12 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.util.List;
 
 public class FilesModulesStepDefinition extends BasePage {
 
     @Given("user loged as user")
-    public void userLogedAsUser() {
+    public void userLoggedAsUser() {
         usernameBox.sendKeys(ConfigurationReader.get("username"));
         passwordBox.sendKeys(ConfigurationReader.get("password"));
         signInButton.click();
@@ -34,16 +33,12 @@ public class FilesModulesStepDefinition extends BasePage {
         Assert.assertEquals(Driver.get().getTitle(), "Files - Trycloud QA");
     }
 
-
     @Given("click the top left checkbox of the table")
     public void click_the_top_left_checkbox_of_the_table() throws InterruptedException {
         JavascriptExecutor executor = (JavascriptExecutor)Driver.get();
-        new WebDriverWait(Driver.get(),20)
-       .until(ExpectedConditions.elementToBeClickable(selectAllFiles));
-
+        new WebDriverWait(Driver.get(),20).until(ExpectedConditions
+                                                         .elementToBeClickable(selectAllFiles));
         executor.executeScript("arguments[0].click();", selectAllFiles);
-        /*selectAllFiles.click();
-        new BasePage().selectAllFiles.click();*/
     }
 
     @Then("all files are selected")
@@ -53,9 +48,6 @@ public class FilesModulesStepDefinition extends BasePage {
             Assert.assertTrue(file.isSelected());
             System.out.println(file.isSelected());
         }
-
     }
-
-
 
 }
