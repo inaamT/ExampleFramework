@@ -5,11 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.io.File;
 import java.util.List;
 
 
-public class BasePage {
+public abstract class BasePage {
 
     public BasePage() {
         PageFactory.initElements(Driver.get(), this);
@@ -33,8 +32,5 @@ public class BasePage {
     public List<WebElement> allSelectedCheckbox;
 
 
-    public static void main(String[] args) {
-    File file = new File("");
-        System.out.println(file.getAbsolutePath());
-    }
+
 }

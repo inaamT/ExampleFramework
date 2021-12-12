@@ -1,7 +1,8 @@
 package com.exampleProject.step_definitions;
 
 import com.exampleProject.pages.BasePage;
-import com.exampleProject.utilities.*;
+import com.exampleProject.pages.FilesModulePage;
+import com.exampleProject.utilities.ConfigurationReader;
 import com.exampleProject.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -12,11 +13,11 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import java.util.List;
 
 public class FilesModulesStepDefinition extends BasePage {
+    FilesModulePage filesModulePage = new FilesModulePage();
 
-    @Given("user loged as user")
+    @Given("user logged as user")
     public void userLoggedAsUser() {
         usernameBox.sendKeys(ConfigurationReader.get("username"));
         passwordBox.sendKeys(ConfigurationReader.get("password"));
@@ -43,10 +44,8 @@ public class FilesModulesStepDefinition extends BasePage {
 
     @Then("all files are selected")
     public void all_files_are_selected() {
-    List<WebElement> listOfFiles = allSelectedCheckbox;
-        for (WebElement file : listOfFiles) {
-            Assert.assertTrue(file.isSelected());
-            System.out.println(file.isSelected());
+        for (WebElement each : filesModulePage.getSelectedCheckBox()) {
+            System.out.println(each.isSelected());
         }
     }
 
