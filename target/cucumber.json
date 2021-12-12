@@ -1,0 +1,142 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-12-12T02:40:32.780Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5573000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.exampleProject.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Verify users can select all the uploaded files from the page",
+        "description": "",
+        "id": "as-a-user--i-should-be-able-to-access-to-files-module.;verify-users-can-select-all-the-uploaded-files-from-the-page",
+        "after": [
+          {
+            "result": {
+              "duration": 783000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.exampleProject.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7863000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user logged as user",
+            "match": {
+              "location": "com.exampleProject.step_definitions.FilesModulesStepDefinition.userLoggedAsUser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4085000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user click Files module",
+            "match": {
+              "location": "com.exampleProject.step_definitions.FilesModulesStepDefinition.userClickFilesModule()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Title is Files\u0027s module Title",
+            "match": {
+              "location": "com.exampleProject.step_definitions.FilesModulesStepDefinition.title_is_files_s_module_title()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 985000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "click the top left checkbox of the table",
+            "match": {
+              "location": "com.exampleProject.step_definitions.FilesModulesStepDefinition.click_the_top_left_checkbox_of_the_table()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 617000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "all files are selected",
+            "match": {
+              "location": "com.exampleProject.step_definitions.FilesModulesStepDefinition.all_files_are_selected()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@BA-199"
+          },
+          {
+            "name": "@BA-195"
+          },
+          {
+            "name": "@wip"
+          }
+        ]
+      }
+    ],
+    "name": "As a user, I should be able to access to Files module.",
+    "description": "",
+    "id": "as-a-user--i-should-be-able-to-access-to-files-module.",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/filesModule.feature",
+    "tags": [
+      {
+        "name": "@BA-199",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@BA-195",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 9
+        }
+      },
+      {
+        "name": "@wip",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 17
+        }
+      }
+    ]
+  }
+]

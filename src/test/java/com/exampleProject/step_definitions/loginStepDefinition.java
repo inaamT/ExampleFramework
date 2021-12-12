@@ -14,7 +14,6 @@ public class loginStepDefinition extends BasePage {
         Assert.assertEquals(Driver.get().getTitle(),str);
     }
 
-
     @When("user Enter valid username")
     public void user_enter_valid_username() {
        usernameBox.sendKeys(ConfigurationReader.get("username"));
@@ -49,7 +48,5 @@ public class loginStepDefinition extends BasePage {
     public void title_should_be_same_as(String string) {
         Assert.assertEquals(Driver.get().getTitle(), string);
     }
-
-
 
 }
