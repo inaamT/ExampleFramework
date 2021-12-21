@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 
-public abstract class BasePage {
+public class BasePage {
 
     public BasePage() {
         PageFactory.initElements(Driver.get(), this);
@@ -30,6 +30,9 @@ public abstract class BasePage {
     public WebElement selectAllFiles;
     @FindBy(xpath = "//tbody[@id='fileList']//td[@class='selection']")
     public List<WebElement> allSelectedCheckbox;
+
+    @FindBy(xpath = "//a[contains(.,'holiday')]")
+    public List<WebElement> linksLis;
 
 
 

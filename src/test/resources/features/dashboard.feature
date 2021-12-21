@@ -1,4 +1,4 @@
-@BA-196 @BA-197
+@BA-196 @BA-197 @wip
 Feature: Checking menu bar contenents
 
   Scenario: Validating Menu bar
